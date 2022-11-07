@@ -1,0 +1,52 @@
+:root {
+    --title-text-color: #9DA4BD; 
+    --primery-white-color: #ffffff; 
+    --sub-title-color: rgba(157, 164, 189, 0.6);
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Header */
+.header-link {
+    color: var(--primery-white-color);
+    background-color: gray;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.3;
+    text-decoration: none;
+    letter-spacing: 10%;
+}
+
+.link {
+    text-decoration: none;
+}
+
+/* Hero */
+.sub-title {
+    color: var(--sub-title-color);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-transform: uppercase;
+}
+
+.title {
+    color: var(--primery-white-color);
+    background-color: #9DA4BD;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.18;
+    letter-spacing: 5%;
+}
+
+.hero-text {
+    color: var(--title-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 2%;
+}
