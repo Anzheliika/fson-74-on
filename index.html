@@ -18,26 +18,28 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css">
+    
+    
   </head>
 
   <body>
     <header class="header">
       <div class="container">
-        <a href="./index.html" class="header-logo">
+        <a href="./index.html" class="logo">
           <img src="./images/logo.svg" alt="Logo" />
         </a>
-        <nav class="header-nav">
-          <ul class="header-list list">
-            <li class="item"><a href="" class="header-link link">About</a></li>
-            <li class="item"><a href="" class="header-link link">Services and prices</a></li>
-            <li class="item"><a href="" class="header-link link">Barbers</a></li>
-            <li class="item"><a href="" class="header-link link">Contacts</a></li>
+        <nav class="navigation">
+          <ul class="navigation__list list">
+            <li class="navigation__item"><a href="" class="navigation__link link">About</a></li>
+            <li class="navigation__item"><a href="" class="navigation__link link">Services and prices</a></li>
+            <li class="navigation__item"><a href="" class="navigation__link link">Barbers</a></li>
+            <li class="navigation__item"><a href="" class="navigation__link link">Contacts</a></li>
           </ul>
         </nav>
-        <div class="header-contact">
-          <a href="tel:+380441111111" class="header-tel link">+38 044 111 11 11</a>
-          <button type="button" class="header-btn btn">Online-booking</button>
+        <div class="connection">
+          <a href="tel:+380441111111" class="connection__tel link">+38 044 111 11 11</a>
+          <button type="button" class="connection__btn btn" data-modal-open>Online-booking</button>
         </div>
       </div>
     </header>
@@ -45,14 +47,16 @@
     <main>
       <section class="hero">
         <div class="container">
-          <ul class="hero-list list">
-            <li>
-              <a href="" rel="noopener noreferrer nofollow" class="hero-links link">Instagram</a>
-            </li>
-            <li>
-              <a href="" rel="noopener noreferrer nofollow" class="hero-links link">Youtube</a>
-            </li>
-          </ul>
+          <div class="hero-soc">
+            <ul class="hero-list list">
+              <li>
+                <a href="" rel="noopener noreferrer nofollow" class="hero-links link">Instagram</a>
+              </li>
+              <li>
+                <a href="" rel="noopener noreferrer nofollow" class="hero-links link">Youtube</a>
+              </li>
+            </ul>
+          </div>
           <div class="hero-right">
             <p class="sub-title pre-title">A hair salon for men in Kyiv</p>
             <h1 class="hero-title title">BarberShop</h1>
@@ -135,28 +139,28 @@
       <section class="benefits">
         <div class="container">
           <div class="benefits-left">
-          <ul class="benefits-list list">
-            <div class="benefits-wrap-first">
-              <li class="benefits-items">
-                <span>600</span>
-                <p>Satisfied customers per day</p>
-              </li>
-              <li class="benefits-items">
-                <span>20</span>
-                <p>Kyiv’s best barbers</p>
-              </li>
-            </div>
-            <div class="benefits-wrap-second">
-              <li class="benefits-items">
-                <span>50</span>
-                <p>Awards for excellent service</p>
-              </li>
-              <li class="benefits-items">
-                <span>100</span>
-                <p>Gifts for regular customers</p>
-              </li>
-            </div>
-          </ul>
+            <ul class="benefits-list list">
+              <div class="benefits-wrap-first">
+                <li class="benefits-items">
+                  <span>600</span>
+                  <p>Satisfied customers per day</p>
+                </li>
+                <li class="benefits-items">
+                  <span>20</span>
+                  <p>Kyiv’s best barbers</p>
+                </li>
+              </div>
+              <div class="benefits-wrap-second">
+                <li class="benefits-items">
+                  <span>50</span>
+                  <p>Awards for excellent service</p>
+                </li>
+                <li class="benefits-items">
+                  <span>100</span>
+                  <p>Gifts for regular customers</p>
+                </li>
+              </div>
+            </ul>
           </div>
           <div class="benefits-right">
             <p class="benefits-pre-title pre-title">Old traditional school</p>
@@ -175,83 +179,133 @@
           <h2 class="barbers-title title">Our barbers</h2>
           <ul class="barbers-list list">
             <li class="barbers-items">
-              <img src="./images/our_barbers_1.jpg" alt="our barbers" width="370" height="346" />
+              <div class="barbers-thumb">
+                <img src="./images/our_barbers_1.jpg" alt="our barbers" width="370" height="346" />
+                <p class="barbers-cover-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ipsa! Nostrum,
+                  atque? Aperiam minima quas recusandae quia, nam dolores. Atque non quos adipisci
+                  quisquam similique ab neque, quidem ratione aliquam. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Nisi, ipsa! Nostrum, atque? Aperiam minima quas
+                  recusandae quia, nam dolores. Atque non quos adipisci quisquam similique ab neque,
+                  quidem ratione aliquam.
+                </p>
+              </div>
               <h3 class="barbers-name">John Smith</h3>
               <p class="barbers-info">Extreme Barber</p>
 
               <ul class="barbers-soc-list list">
                 <li class="barbers-soc-items">
                   <a href="#" class="barbers-soc-link">
-                    <svg width="20" height="20" class="barbers-soc-icons"><use href="./images/icons.svg#icon-instagram"></use></svg>
+                    <svg width="20" height="20" class="barbers-soc-icons">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
                   </a>
                 </li>
                 <li class="barbers-soc-items">
                   <a href="#" class="barbers-soc-link">
-                    <svg width="20" height="20" class="barbers-soc-icons"><use href="./images/icons.svg#icon-twitter"></use></svg>
+                    <svg width="20" height="20" class="barbers-soc-icons">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
                   </a>
                 </li>
                 <li class="barbers-soc-items">
                   <a href="#" class="barbers-soc-link">
-                    <svg width="20" height="20" class="barbers-soc-icons"><use href="./images/icons.svg#icon-facebook"></use></svg>
+                    <svg width="20" height="20" class="barbers-soc-icons">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
                   </a>
                 </li>
                 <li class="barbers-soc-items">
                   <a href="#" class="barbers-soc-link">
-                    <svg width="20" height="20" class="barbers-soc-icons"><use href="./images/icons.svg#icon-linkedin"></use></svg>
+                    <svg width="20" height="20" class="barbers-soc-icons">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
                   </a>
                 </li>
               </ul>
             </li>
+
             <li class="barbers-items">
-              <img src="./images/our_barbers_2.jpg" alt="our barbers" width="370" height="346" />
+              <div class="barbers-thumb">
+                <img src="./images/our_barbers_2.jpg" alt="our barbers" width="370" height="346" />
+                <p class="barbers-cover-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ipsa! Nostrum,
+                  atque? Aperiam minima quas recusandae quia, nam dolores. Atque non quos adipisci
+                  quisquam similique ab neque, quidem ratione aliquam.
+                </p>
+              </div>
               <h3 class="barbers-name">Michele Doe</h3>
               <p class="barbers-info">Extreme Barber</p>
               <ul class="barbers-soc-list list">
                 <li class="barbers-soc-items">
                   <a href="#" class="barbers-soc-link">
-                    <svg width="20" height="20" class="barbers-soc-icons"><use href="./images/icons.svg#icon-instagram"></use></svg>
+                    <svg width="20" height="20" class="barbers-soc-icons">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
                   </a>
                 </li>
                 <li class="barbers-soc-items">
                   <a href="#" class="barbers-soc-link">
-                    <svg width="20" height="20" class="barbers-soc-icons"><use href="./images/icons.svg#icon-twitter"></use></svg>
+                    <svg width="20" height="20" class="barbers-soc-icons">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
                   </a>
                 </li>
                 <li class="barbers-soc-items">
                   <a href="#" class="barbers-soc-link">
-                    <svg width="20" height="20" class="barbers-soc-icons"><use href="./images/icons.svg#icon-facebook"></use></svg>
+                    <svg width="20" height="20" class="barbers-soc-icons">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
                   </a>
                 </li>
                 <li class="barbers-soc-items">
                   <a href="#" class="barbers-soc-link">
-                    <svg width="20" height="20" class="barbers-soc-icons"><use href="./images/icons.svg#icon-linkedin"></use></svg>
+                    <svg width="20" height="20" class="barbers-soc-icons">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
                   </a>
                 </li>
               </ul>
             </li>
+
             <li class="barbers-items">
-              <img src="./images/our_barbers_3.jpg" alt="our barbers" width="370" height="346" />
+              <div class="barbers-thumb">
+                <img src="./images/our_barbers_3.jpg" alt="our barbers" width="370" height="346" />
+                <p class="barbers-cover-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ipsa! Nostrum,
+                  atque? Aperiam minima quas recusandae quia, nam dolores. Atque non quos adipisci
+                  quisquam similique ab neque, quidem ratione aliquam.
+                </p>
+              </div>
               <h3 class="barbers-name">Alan Black</h3>
               <p class="barbers-info">Extreme Barber</p>
               <ul class="barbers-soc-list list">
                 <li class="barbers-soc-items">
                   <a href="#" class="barbers-soc-link">
-                    <svg width="20" height="20" class="barbers-soc-icons"><use href="./images/icons.svg#icon-instagram"></use></svg>
+                    <svg width="20" height="20" class="barbers-soc-icons">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
                   </a>
                 </li>
                 <li class="barbers-soc-items">
                   <a href="#" class="barbers-soc-link">
-                    <svg width="20" height="20" class="barbers-soc-icons"><use href="./images/icons.svg#icon-twitter"></use></svg>
+                    <svg width="20" height="20" class="barbers-soc-icons">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
                   </a>
                 </li>
                 <li class="barbers-soc-items">
                   <a href="#" class="barbers-soc-link">
-                    <svg width="20" height="20" class="barbers-soc-icons"><use href="./images/icons.svg#icon-facebook"></use></svg>
+                    <svg width="20" height="20" class="barbers-soc-icons">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
                   </a>
                 </li>
                 <li class="barbers-soc-items">
                   <a href="#" class="barbers-soc-link">
-                    <svg width="20" height="20" class="barbers-soc-icons"><use href="./images/icons.svg#icon-linkedin"></use></svg>
+                    <svg width="20" height="20" class="barbers-soc-icons">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
                   </a>
                 </li>
               </ul>
@@ -283,37 +337,37 @@
 
       <div class="contact-wrap">
         <div class="container">
-      <section class="form">
-        <h2 class="form-title title">Online-booking</h2>
-      </section>
+          <section class="form">
+            <h2 class="form-title title">Online-booking</h2>
+          </section>
 
-      <section class="contacts">
-        <h2 class="contacts-title title">Contacts</h2>
-        <address>
-          <ul class="contacts-list list">
-            <li contacts-items>
-              <a
-                href="https://goo.gl/maps/WWHFs7K9PLBRaPzP7"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                class="contacts-links link contact-address"
-                >Vasylkivska Street, 7a, Kyiv, 08132</a
-              >
-            </li>
-            <li contacts-items>
-              <a href="tel:+380441111111" class="contacts-links link">+38 044 111 11 11</a>
-            </li>
-            <li contacts-items>
-              <a href="mailto:barbershop@email.com" class="contacts-links link"
-                >barbershop@email.com</a
-              >
-            </li>
-          </ul>
-        </address>
-        <p class="contacts-pre-title pre-title">Working hours</p>
-        <p class="contacts-text">Every day from 9:00 to 22:00</p>
-      </section>
-      </div>
+          <section class="contacts">
+            <h2 class="contacts-title title">Contacts</h2>
+            <address>
+              <ul class="contacts-list list">
+                <li contacts-items>
+                  <a
+                    href="https://goo.gl/maps/WWHFs7K9PLBRaPzP7"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    class="contacts-links link contact-address"
+                    >Vasylkivska Street, 7a, Kyiv, 08132</a
+                  >
+                </li>
+                <li contacts-items>
+                  <a href="tel:+380441111111" class="contacts-links link">+38 044 111 11 11</a>
+                </li>
+                <li contacts-items>
+                  <a href="mailto:barbershop@email.com" class="contacts-links link"
+                    >barbershop@email.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <p class="contacts-pre-title pre-title">Working hours</p>
+            <p class="contacts-text">Every day from 9:00 to 22:00</p>
+          </section>
+        </div>
       </div>
     </main>
 
@@ -330,5 +384,93 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>
+          <svg width="11" height="11">
+            <use href="./images/icons.svg#icon-vector"></use>
+          </svg>
+        </button>
+        <p class="modal-heading">Contact with us</p>
+        <form action="">
+          <div class="modal-input-group">
+            <label for="name">Ведіть Ваше ім'я</label>
+            <input
+              type="text"
+              class="modal-input"
+              placeholder="Ведіть Ваше ім'я"
+              name="name"
+              id="name"
+              required
+            />
+          </div>
+          <div class="modal-input-group">
+            <label for="email">Ведіть e-mail</label>
+            <input
+              type="email"
+              class="modal-input"
+              placeholder="Ведіть e-mail"
+              name="email"
+              id="email"
+              required
+            />
+          </div>
+          <div class="modal-input-group">
+            <label for="tel">Ведіть номер телефону</label>
+            <input
+              type="tel"
+              class="modal-input"
+              placeholder="Ведіть номер телефону"
+              name="tel"
+              id="tel"
+              required
+              value="+380"
+              pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+            />
+          </div>
+          <fieldset>
+            <legend>Choose Services</legend>
+            <input type="radio" name="service" id="haircut" value="haircut" checked />
+            <label for="haircut">Men’s haircut</label>
+            <input type="radio" name="service" id="beard" value="beard" />
+            <label for="beard">Beard trim</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Additional Services</legend>
+            <input type="checkbox" name="additional" id="nozzle" value="nozzle" />
+            <label for="nozzle">Haircut under the nozzle</label>
+
+            <input type="checkbox" name="additional" id="trainee" value="trainee" />
+            <label for="trainee">Trainee’s haircut</label>
+
+            <input type="checkbox" name="additional" id="razor" value="razor" />
+            <label for="razor">Straight razor shave</label>
+          </fieldset>
+
+          <div class="modal-input-group">
+            <label for="barber">Choose barber</label>
+            <select name="barber" id="barber" class="modal-select">
+              <option value="johnsmith">John Smith</option>
+              <option value="micheledoe">Michele Doe</option>
+              <option value="alanblack">Alan Black</option>
+            </select>
+          </div>
+
+          <div class="modal-input-group">
+            <label for="comment">Ведіть коментар</label>
+            <textarea
+              name="comment"
+              id="comment"
+              class="modal-text"
+              placeholder="Ведіть коментар"
+            ></textarea>
+          </div>
+          <button type="submit">Відправити</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

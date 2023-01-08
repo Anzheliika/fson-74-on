@@ -1,0 +1,16 @@
+.gallery {
+  padding: 120px 0;
+}
+.gallery-pre-title {
+  margin-bottom: 44px;
+  color: #303030;
+}
+.gallery-list {
+  display: flex;
+}
+.gallery-item {
+  width: calc((100% - 90px) / 4);
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}

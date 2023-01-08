@@ -1,0 +1,12 @@
+.pre-title {
+  @include font(11, 600, 15, null);
+  text-transform: uppercase;
+  @extend %flex-align;
+  &::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: currentColor;
+  margin-right: 20px;
+}
+}
