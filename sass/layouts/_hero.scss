@@ -1,9 +1,33 @@
-.hero-soc {
-  width: 100px;
+.hero {
+  margin: 0 auto;
+  @include tablet {
+    width: 768px;
+  }
+  @include desktop {
+    width: 1200px;
+  }
+}
+.hero .container {
   display: flex;
-  align-items: flex-end;
-  padding-left: 21px;
-  padding-bottom: 40px;
+  padding: 0;
+}
+.hero-soc {
+  display: none;
+  @include tablet {
+    width: 90px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 37px;
+    padding-bottom: 40px;
+    margin-right: 30px;
+  }
+
+  @include desktop {
+    width: 155px;
+    padding-left: 82px;
+    padding-bottom: 40px;
+    margin-right: 0;
+  }
 }
 .hero-list {
   @extend %flex-align;
@@ -18,19 +42,41 @@
   }
 }
 
-.hero .container {
-  display: flex;
-}
 .hero-right {
-  padding: 272px 526px 208px 100px;
-  flex-grow: 1;
+  padding: 208px 113px 209px 31px;
   background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-    url(../images/hero-background.jpg);
+    url(/images/hero-background_mob.jpg);
+  @include retina {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+      url(/images/hero-background_mob_2x.jpg);
+  }
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  height: 580px;
   background-color: #303030;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include tablet {
+    padding: 272px 90px 237px 120px;
+    flex-grow: 1;
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+      url(/images/hero-background_tablet.jpg);
+    background-size: 600px;
+    @include retina {
+      background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+        url(/images/hero-background_tablet_2x.jpg);
+    }
+  }
+
+  @include desktop {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+      url(/images/hero-background.jpg);
+    background-size: 1070px;
+    @include retina {
+      background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+        url(/images/hero-background_2x.jpg);
+    }
+  }
 }
 .sub-title {
   margin-bottom: var(--main-margin);
@@ -39,14 +85,25 @@
 .hero-title {
   margin-bottom: var(--main-margin);
   color: var(--second-header-color);
-  font-size: 72px;
+  font-size: 48px;
+  line-height: 1.16;
+
+  @include tablet {
+    font-size: 72px;
+    line-height: 1.18;
+  }
 }
 .hero-text {
   max-width: 400px;
   color: var(--title-text-color);
-  font-size: 18px;
-  line-height: 1.67;
+  font-size: 16px;
+  line-height: 1.63;
   letter-spacing: 0.02em;
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 1.67;
+  }
 }
 .hero-links {
   font-weight: 600;

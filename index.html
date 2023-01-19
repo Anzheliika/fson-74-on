@@ -25,7 +25,8 @@
     <header class="header">
       <div class="container">
         <a href="./index.html" class="logo">
-          <img src="./images/logo.svg" alt="Logo" />
+          <svg width="69" height="56"><use href="./images/icons.svg#icon-logo"></use></svg>
+          <!-- <img src="./images/logo.svg" alt="Logo" class="logo"/> -->
         </a>
         <nav class="navigation">
           <ul class="navigation__list list">
@@ -40,6 +41,63 @@
         <div class="connection">
           <a href="tel:+380441111111" class="connection__tel link">+38 044 111 11 11</a>
           <button type="button" class="connection__btn btn" data-modal-open>Online-booking</button>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="menu-open is-open"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-menu-open
+      >
+        <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+          <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+          <use class="icon-close" href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu"  id="mobile-menu" data-menu>
+        <div class="container">
+          <div class="menu-content">
+            <div>
+              <button type="button" class="menu-close">
+                <svg width="40" height="40">
+                  <use class="icon-close" href="./images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+              <nav class="mob-navigation">
+                <ul class="mob-navigation-list list">
+                  <li><a href="./about.html" class="mob-navigation-link current link">About</a></li>
+                  <li><a href="" class="mob-navigation-link link">Services and prices</a></li>
+                  <li><a href="" class="mob-navigation-link link">Barbers</a></li>
+                  <li><a href="" class="mob-navigation-link link">Contacts</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="mob-connection-soc">
+              <div class="mob-connection">
+                <a href="tel:+380441111111" class="mob-connection-tel link">+38 044 111 11 11</a>
+                <button type="button" class="mob-connection-btn btn" data-modal-open>
+                  Online-booking
+                </button>
+              </div>
+
+              <div class="mob-social-link">
+                <ul class="mob-social-link-list list">
+                  <li>
+                    <a href="" rel="noopener noreferrer nofollow" class="mob-social-link-links link"
+                      >Instagram</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" rel="noopener noreferrer nofollow" class="mob-social-link-links link"
+                      >Youtube</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -58,11 +116,13 @@
             </ul>
           </div>
           <div class="hero-right">
-            <p class="sub-title pre-title">A hair salon for men in Kyiv</p>
-            <h1 class="hero-title title">BarberShop</h1>
-            <p class="hero-text">
-              We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
-            </p>
+            <div class="hero-right-title">
+              <p class="sub-title pre-title">A hair salon for men in Kyiv</p>
+              <h1 class="hero-title title">BarberShop</h1>
+              <p class="hero-text">
+                We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -70,8 +130,20 @@
       <section class="about">
         <div class="container">
           <ul class="list-about list">
-            <li class="about-items"><img src="./images/img-1.jpg" alt="barber cuts hair" /></li>
-            <li class="about-items"><img src="./images/img-2.jpg" alt="barber works" /></li>
+            <li class="about-items">
+              <picture>
+                <source srcset="./images/img-1.jpg" media="(min-width:1200px)" />
+                <source srcset="./images/img-1_tablet.jpg" media="(min-width:768px)" />
+                <img src="./images/img-1.jpg" alt="barber cuts hair" />
+              </picture>
+            </li>
+            <li class="about-items">
+              <picture>
+                <source srcset="./images/img-2.jpg" media="(min-width:1200px)" />
+                <source srcset="./images/img-2_tablet.jpg" media="(min-width:768px)" />
+                <img src="./images/img-2.jpg" alt="barber works" />
+              </picture>
+            </li>
           </ul>
           <div class="about-wrap">
             <p class="about-pre-title pre-title">About</p>
@@ -94,43 +166,45 @@
         <div class="container">
           <p class="prices-pre-title pre-title">Spend your time with the best masters</p>
           <h2 class="prices-title title">Services and prices</h2>
-          <div class="prices-list-wrap">
-            <ul class="prices-list list">
-              <li class="prices-items">
-                <p class="prices-elem">Men’s haircut</p>
-                <p class="prices-elem">from 300 uah.</p>
-              </li>
-              <li class="prices-items">
-                <p class="prices-elem">Beard trim</p>
-                <p class="prices-elem">from 300 uah.</p>
-              </li>
-              <li class="prices-items">
-                <p class="prices-elem">Mustache trim</p>
-                <p class="prices-elem">from 200 uah.</p>
-              </li>
-              <li class="prices-items">
-                <p class="prices-elem">Straight razor shave</p>
-                <p class="prices-elem">from 200 uah.</p>
-              </li>
-            </ul>
-            <ul class="prices-list list">
-              <li class="prices-items">
-                <p class="prices-elem">Trainee’s haircut</p>
-                <p class="prices-elem">from 50 uah.</p>
-              </li>
-              <li class="prices-items">
-                <p class="prices-elem">Haircut under the nozzle</p>
-                <p class="prices-elem">from 200 uah.</p>
-              </li>
-              <li class="prices-items">
-                <p class="prices-elem">Children’s haircut (0-12 y.o.)</p>
-                <p class="prices-elem">from 300 uah.</p>
-              </li>
-              <li class="prices-items">
-                <p class="prices-elem">Camouflage of gray hair</p>
-                <p class="prices-elem">from 200 uah.</p>
-              </li>
-            </ul>
+          <div class="prices-list-wrap-mob">
+            <div class="prices-list-wrap">
+              <ul class="prices-list list">
+                <li class="prices-items">
+                  <p class="prices-elem">Men’s haircut</p>
+                  <p class="prices-elem">from 300 uah.</p>
+                </li>
+                <li class="prices-items">
+                  <p class="prices-elem">Beard trim</p>
+                  <p class="prices-elem">from 300 uah.</p>
+                </li>
+                <li class="prices-items">
+                  <p class="prices-elem">Mustache trim</p>
+                  <p class="prices-elem">from 200 uah.</p>
+                </li>
+                <li class="prices-items">
+                  <p class="prices-elem">Straight razor shave</p>
+                  <p class="prices-elem">from 200 uah.</p>
+                </li>
+              </ul>
+              <ul class="prices-list list">
+                <li class="prices-items">
+                  <p class="prices-elem">Trainee’s haircut</p>
+                  <p class="prices-elem">from 50 uah.</p>
+                </li>
+                <li class="prices-items">
+                  <p class="prices-elem">Haircut under the nozzle</p>
+                  <p class="prices-elem">from 200 uah.</p>
+                </li>
+                <li class="prices-items">
+                  <p class="prices-elem">Children’s haircut (0-12 y.o.)</p>
+                  <p class="prices-elem">from 300 uah.</p>
+                </li>
+                <li class="prices-items">
+                  <p class="prices-elem">Camouflage of gray hair</p>
+                  <p class="prices-elem">from 200 uah.</p>
+                </li>
+              </ul>
+            </div>
           </div>
           <button type="button" class="prices-btn btn">Online-booking</button>
         </div>
@@ -164,7 +238,7 @@
           </div>
           <div class="benefits-right">
             <p class="benefits-pre-title pre-title">Old traditional school</p>
-            <h2 class="benefits-title tile">¿Why people come to us?</h2>
+            <h2 class="benefits-title title">¿Why people come to us?</h2>
             <p class="benefits-after-title after-title">
               Only good things are said about us. But it's better to see and feel 1 time than read
               10 times.
@@ -175,12 +249,20 @@
 
       <section class="barbers">
         <div class="container">
-          <p class="barbers-pre-title pre-title">For true enjoyers of the atmosphere</p>
-          <h2 class="barbers-title title">Our barbers</h2>
+          <div class="barbers-div-title">
+            <p class="barbers-pre-title pre-title">For true enjoyers of the atmosphere</p>
+            <h2 class="barbers-title title">Our barbers</h2>
+          </div>
           <ul class="barbers-list list">
             <li class="barbers-items">
               <div class="barbers-thumb">
-                <img src="./images/our_barbers_1.jpg" alt="our barbers" width="370" height="346" />
+                <picture>
+                  <source srcset="./images/our_barbers_1.jpg" media="(min-width:1200px)" />
+                  <source srcset="./images/barbers-1_tablet.jpg" media="(min-width:768px)" />
+                  <source srcset="./images/barbers-1_mob.jpg" media="(min-width:480px)" />
+                  <img src="./images/barbers-1_mob.jpg" alt="our barbers" />
+                </picture>
+
                 <p class="barbers-cover-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ipsa! Nostrum,
                   atque? Aperiam minima quas recusandae quia, nam dolores. Atque non quos adipisci
@@ -227,7 +309,13 @@
 
             <li class="barbers-items">
               <div class="barbers-thumb">
-                <img src="./images/our_barbers_2.jpg" alt="our barbers" width="370" height="346" />
+                <picture>
+                  <source srcset="./images/our_barbers_2.jpg" media="(min-width:1200px)" />
+                  <source srcset="./images/barbers-2_tablet.jpg" media="(min-width:768px)" />
+                  <source srcset="./images/barbers-2_mob.jpg" media="(min-width:480px)" />
+                  <img src="./images/our_barbers_2.jpg" alt="our barbers" />
+                </picture>
+
                 <p class="barbers-cover-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ipsa! Nostrum,
                   atque? Aperiam minima quas recusandae quia, nam dolores. Atque non quos adipisci
@@ -270,7 +358,12 @@
 
             <li class="barbers-items">
               <div class="barbers-thumb">
-                <img src="./images/our_barbers_3.jpg" alt="our barbers" width="370" height="346" />
+                <picture>
+                  <source srcset="./images/our_barbers_3.jpg" media="(min-width:1200px)" />
+                  <source srcset="./images/barbers-3_tablet.jpg" media="(min-width:768px)" />
+                  <source srcset="./images/barbers-3_mob.jpg" media="(min-width:480px)" />
+                  <img src="./images/our_barbers_3.jpg" alt="our barbers" />
+                </picture>
                 <p class="barbers-cover-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ipsa! Nostrum,
                   atque? Aperiam minima quas recusandae quia, nam dolores. Atque non quos adipisci
@@ -320,16 +413,36 @@
           <h2 class="visually-hidden title">Gallery</h2>
           <ul class="gallery-list list">
             <li class="gallery-item">
-              <img src="./images/gallery_img_1.jpg" alt="gallery image" width="270" height="360" />
+              <picture>
+                <source srcset="./images/gallery_img_1.jpg" media="(min-width:1200px)" />
+                <source srcset="./images/gallery_img_1_tablet.jpg" media="(min-width:768px)" />
+                <source srcset="./images/gallery_img_1_mob.jpg" media="(min-width:480px)" />
+                <img src="./images/gallery_img_1_mob.jpg" alt="gallery image" />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img src="./images/gallery_img_2.jpg" alt="gallery image" width="270" height="360" />
+              <picture>
+                <source srcset="./images/gallery_img_2.jpg" media="(min-width:1200px)" />
+                <source srcset="./images/gallery_img_2_tablet.jpg" media="(min-width:768px)" />
+                <source srcset="./images/gallery_img_2_mob.jpg" media="(min-width:480px)" />
+                <img src="./images/gallery_img_2_mob.jpg" alt="gallery image" />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img src="./images/gallery_img_3.jpg" alt="gallery image" width="270" height="360" />
+              <picture>
+                <source srcset="./images/gallery_img_3.jpg" media="(min-width:1200px)" />
+                <source srcset="./images/gallery_img_3_tablet.jpg" media="(min-width:768px)" />
+                <source srcset="./images/gallery_img_3_mob.jpg" media="(min-width:480px)" />
+                <img src="./images/gallery_img_3_mob.jpg" alt="gallery image" />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img src="./images/gallery_img_4.jpg" alt="gallery image" width="270" height="360" />
+              <picture>
+                <source srcset="./images/gallery_img_4.jpg" media="(min-width:1200px)" />
+                <source srcset="./images/gallery_img_4_tablet.jpg" media="(min-width:768px)" />
+                <source srcset="./images/gallery_img_4_mob.jpg" media="(min-width:480px)" />
+                <img src="./images/gallery_img_4_mob.jpg" alt="gallery image" />
+              </picture>
             </li>
           </ul>
         </div>
@@ -364,38 +477,42 @@
 
           <section class="contacts">
             <h2 class="contacts-title title">Contacts</h2>
-            <address>
-              <ul class="contacts-list list">
-                <li class="contacts-items">
-                  <svg width="30" height="30" class="contacts-icon">
-                    <use href="./images/icons.svg#icon-map-pin"></use>
-                  </svg>
-                  <a
-                    href="https://goo.gl/maps/WWHFs7K9PLBRaPzP7"
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    class="contacts-links link contact-address"
-                    >Vasylkivska Street, 7A, Kyiv, 08132</a
-                  >
-                </li>
-                <li class="contacts-items">
-                  <svg width="30" height="30" class="contacts-icon">
-                    <use href="./images/icons.svg#icon-phone_contacts"></use>
-                  </svg>
-                  <a href="tel:+380441111111" class="contacts-links link">+38 044 111 11 11</a>
-                </li>
-                <li class="contacts-items">
-                  <svg width="30" height="30" class="contacts-icon">
-                    <use href="./images/icons.svg#icon-mail_contacts"></use>
-                  </svg>
-                  <a href="mailto:barbershop@email.com" class="contacts-links"
-                    >barbershop@email.com</a
-                  >
-                </li>
-              </ul>
-            </address>
-            <p class="contacts-pre-title pre-title">Working hours</p>
-            <p class="contacts-text">Every day from 9:00 to 22:00</p>
+            <div class="address-div">
+              <address>
+                <ul class="contacts-list list">
+                  <li class="contacts-items">
+                    <svg width="30" height="30" class="contacts-icon">
+                      <use href="./images/icons.svg#icon-map-pin"></use>
+                    </svg>
+                    <a
+                      href="https://goo.gl/maps/WWHFs7K9PLBRaPzP7"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      class="contacts-links link contact-address"
+                      >Vasylkivska Street, 7A, Kyiv, 08132</a
+                    >
+                  </li>
+                  <li class="contacts-items">
+                    <svg width="30" height="30" class="contacts-icon">
+                      <use href="./images/icons.svg#icon-phone_contacts"></use>
+                    </svg>
+                    <a href="tel:+380441111111" class="contacts-links link">+38 044 111 11 11</a>
+                  </li>
+                  <li class="contacts-items">
+                    <svg width="30" height="30" class="contacts-icon">
+                      <use href="./images/icons.svg#icon-mail_contacts"></use>
+                    </svg>
+                    <a href="mailto:barbershop@email.com" class="contacts-links"
+                      >barbershop@email.com</a
+                    >
+                  </li>
+                </ul>
+              </address>
+              <div class="working-hours">
+                <p class="contacts-pre-title pre-title">Working hours</p>
+                <p class="contacts-text">Every day from 9:00 to 22:00</p>
+              </div>
+            </div>
           </section>
         </div>
       </div>
@@ -504,5 +621,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
