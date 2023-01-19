@@ -1,0 +1,37 @@
+.about {
+  padding: 120px 0;
+  & .container {
+    display: flex;
+  }
+}
+.list-about {
+  display: flex;
+}
+.about-wrap {
+  margin-left: 30px;
+  max-width: 470px;
+}
+.about-items:not(:last-child) {
+  margin-right: 30px;
+}
+.about-pre-title {
+  margin-bottom: var(--main-margin);
+  color: var(--primery-header-color);
+}
+.about-title {
+  margin-bottom: var(--main-margin);
+  color: var(--primery-header-color);
+  font-size: 42px;
+}
+.about-after-title {
+  margin-bottom: var(--main-margin);
+  color: #555555;
+}
+.about-text {
+  margin-bottom: 42px;
+  @include font(14, null, 30, 0.02);
+  color: #555555;
+}
+.about-btn {
+  color: var(--primery-header-color);
+}
