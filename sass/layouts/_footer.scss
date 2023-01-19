@@ -6,7 +6,16 @@
 }
 .footer-list {
   display: flex;
+  align-items: center;
   margin-left: auto;
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    background: #303030;
+    margin-right: 40px;
+  }
 }
 .footer-items:not(:last-child) {
   margin-right: 40px;

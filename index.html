@@ -18,9 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/main.min.css">
-    
-    
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
@@ -32,7 +30,9 @@
         <nav class="navigation">
           <ul class="navigation__list list">
             <li class="navigation__item"><a href="" class="navigation__link link">About</a></li>
-            <li class="navigation__item"><a href="" class="navigation__link link">Services and prices</a></li>
+            <li class="navigation__item">
+              <a href="" class="navigation__link link">Services and prices</a>
+            </li>
             <li class="navigation__item"><a href="" class="navigation__link link">Barbers</a></li>
             <li class="navigation__item"><a href="" class="navigation__link link">Contacts</a></li>
           </ul>
@@ -339,26 +339,56 @@
         <div class="container">
           <section class="form">
             <h2 class="form-title title">Online-booking</h2>
+            <form action="" class="contact-form">
+              <input
+                type="text"
+                name="name"
+                class="contact-input contact-form-item"
+                placeholder="Name*"
+              /><input
+                type="tel"
+                name="phone"
+                class="contact-input contact-form-item"
+                placeholder="Phone*"
+              />
+
+              <textarea
+                name="message"
+                class="contact-textarea contact-form-item"
+                placeholder="Message"
+              ></textarea>
+
+              <button type="submit" class="contact-btn btn">Send</button>
+            </form>
           </section>
 
           <section class="contacts">
             <h2 class="contacts-title title">Contacts</h2>
             <address>
               <ul class="contacts-list list">
-                <li contacts-items>
+                <li class="contacts-items">
+                  <svg width="30" height="30" class="contacts-icon">
+                    <use href="./images/icons.svg#icon-map-pin"></use>
+                  </svg>
                   <a
                     href="https://goo.gl/maps/WWHFs7K9PLBRaPzP7"
                     target="_blank"
                     rel="noopener noreferrer nofollow"
                     class="contacts-links link contact-address"
-                    >Vasylkivska Street, 7a, Kyiv, 08132</a
+                    >Vasylkivska Street, 7A, Kyiv, 08132</a
                   >
                 </li>
-                <li contacts-items>
+                <li class="contacts-items">
+                  <svg width="30" height="30" class="contacts-icon">
+                    <use href="./images/icons.svg#icon-phone_contacts"></use>
+                  </svg>
                   <a href="tel:+380441111111" class="contacts-links link">+38 044 111 11 11</a>
                 </li>
-                <li contacts-items>
-                  <a href="mailto:barbershop@email.com" class="contacts-links link"
+                <li class="contacts-items">
+                  <svg width="30" height="30" class="contacts-icon">
+                    <use href="./images/icons.svg#icon-mail_contacts"></use>
+                  </svg>
+                  <a href="mailto:barbershop@email.com" class="contacts-links"
                     >barbershop@email.com</a
                   >
                 </li>
@@ -386,87 +416,89 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="modal-close" data-modal-close>
-          <svg width="11" height="11">
-            <use href="./images/icons.svg#icon-vector"></use>
-          </svg>
-        </button>
-        <p class="modal-heading">Contact with us</p>
+        <button type="button" class="modal-close" data-modal-close>X</button>
+        <p class="modal-heading">Contact us</p>
         <form action="">
           <div class="modal-input-group">
-            <label for="name">Ведіть Ваше ім'я</label>
-            <input
-              type="text"
-              class="modal-input"
-              placeholder="Ведіть Ваше ім'я"
-              name="name"
-              id="name"
-              required
-            />
+            <label for="name">Enter your name</label>
+            <div class="modal-input-wrapper">
+              <input
+                type="text"
+                class="modal-input"
+                placeholder="Name"
+                name="name"
+                id="name"
+                required
+              />
+              <svg class="modal-input-icon" width="18" height="18">
+                <use href="./img/icons.svg#icon-person"></use>
+              </svg>
+            </div>
           </div>
           <div class="modal-input-group">
-            <label for="email">Ведіть e-mail</label>
-            <input
-              type="email"
-              class="modal-input"
-              placeholder="Ведіть e-mail"
-              name="email"
-              id="email"
-              required
-            />
-          </div>
-          <div class="modal-input-group">
-            <label for="tel">Ведіть номер телефону</label>
-            <input
-              type="tel"
-              class="modal-input"
-              placeholder="Ведіть номер телефону"
-              name="tel"
-              id="tel"
-              required
-              value="+380"
-              pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
-            />
-          </div>
-          <fieldset>
-            <legend>Choose Services</legend>
-            <input type="radio" name="service" id="haircut" value="haircut" checked />
-            <label for="haircut">Men’s haircut</label>
-            <input type="radio" name="service" id="beard" value="beard" />
-            <label for="beard">Beard trim</label>
-          </fieldset>
+            <label for="email">Enter your email</label>
+            <div class="modal-input-wrapper">
+              <input
+                type="email"
+                class="modal-input"
+                placeholder="email@gmail.com"
+                name="email"
+                id="email"
+                required
+              />
 
-          <fieldset>
-            <legend>Additional Services</legend>
-            <input type="checkbox" name="additional" id="nozzle" value="nozzle" />
-            <label for="nozzle">Haircut under the nozzle</label>
-
-            <input type="checkbox" name="additional" id="trainee" value="trainee" />
-            <label for="trainee">Trainee’s haircut</label>
-
-            <input type="checkbox" name="additional" id="razor" value="razor" />
-            <label for="razor">Straight razor shave</label>
-          </fieldset>
-
-          <div class="modal-input-group">
-            <label for="barber">Choose barber</label>
-            <select name="barber" id="barber" class="modal-select">
-              <option value="johnsmith">John Smith</option>
-              <option value="micheledoe">Michele Doe</option>
-              <option value="alanblack">Alan Black</option>
-            </select>
+              <svg class="modal-input-icon" width="18" height="18">
+                <use href="./img/icons.svg#icon-email"></use>
+              </svg>
+            </div>
           </div>
 
           <div class="modal-input-group">
-            <label for="comment">Ведіть коментар</label>
+            <label for="tel">Enter your phone number</label>
+            <div class="modal-input-wrapper">
+              <input
+                type="tel"
+                id="tel"
+                class="modal-input invalid"
+                placeholder="+380 (63) 111-11-11"
+                title="+380 (63) 111-11-11"
+                name="tel"
+                required
+                pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+              /><svg class="modal-input-icon" width="18" height="18">
+                <use href="./img/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-input-group">
+            <label for="comment">Leave your comment</label>
             <textarea
               name="comment"
               id="comment"
               class="modal-text"
-              placeholder="Ведіть коментар"
+              placeholder="Comment"
             ></textarea>
           </div>
-          <button type="submit">Відправити</button>
+
+          <div class="modal-input-group">
+            <input
+              type="checkbox"
+              name="politic"
+              id="politic"
+              class="modal-politic-check visually-hidden"
+            />
+            <label for="politic" class="modal-politic-label">
+              <span class="modal-politic-check2">
+                <svg width="11" height="9">
+                  <use href="./img/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I agree to data processing</label
+            >
+          </div>
+
+          <button type="submit" class="btn">Send</button>
         </form>
       </div>
     </div>
