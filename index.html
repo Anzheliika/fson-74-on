@@ -26,7 +26,6 @@
       <div class="container">
         <a href="./index.html" class="logo">
           <svg width="69" height="56"><use href="./images/icons.svg#icon-logo"></use></svg>
-          <!-- <img src="./images/logo.svg" alt="Logo" class="logo"/> -->
         </a>
         <nav class="navigation">
           <ul class="navigation__list list">
@@ -43,61 +42,25 @@
           <button type="button" class="connection__btn btn" data-modal-open>Online-booking</button>
         </div>
       </div>
-      <button
-        type="button"
-        class="menu-open is-open"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        data-menu-open
-      >
-        <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-          <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
-          <use class="icon-close" href="./images/icons.svg#icon-close"></use>
-        </svg>
-      </button>
-      <div class="mobile-menu"  id="mobile-menu" data-menu>
-        <div class="container">
-          <div class="menu-content">
-            <div>
-              <button type="button" class="menu-close">
-                <svg width="40" height="40">
-                  <use class="icon-close" href="./images/icons.svg#icon-close"></use>
-                </svg>
-              </button>
-              <nav class="mob-navigation">
-                <ul class="mob-navigation-list list">
-                  <li><a href="./about.html" class="mob-navigation-link current link">About</a></li>
-                  <li><a href="" class="mob-navigation-link link">Services and prices</a></li>
-                  <li><a href="" class="mob-navigation-link link">Barbers</a></li>
-                  <li><a href="" class="mob-navigation-link link">Contacts</a></li>
-                </ul>
-              </nav>
-            </div>
-
-            <div class="mob-connection-soc">
-              <div class="mob-connection">
-                <a href="tel:+380441111111" class="mob-connection-tel link">+38 044 111 11 11</a>
-                <button type="button" class="mob-connection-btn btn" data-modal-open>
-                  Online-booking
-                </button>
-              </div>
-
-              <div class="mob-social-link">
-                <ul class="mob-social-link-list list">
-                  <li>
-                    <a href="" rel="noopener noreferrer nofollow" class="mob-social-link-links link"
-                      >Instagram</a
-                    >
-                  </li>
-                  <li>
-                    <a href="" rel="noopener noreferrer nofollow" class="mob-social-link-links link"
-                      >Youtube</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div class="mobile-menu">
+        <button
+          type="button"
+          class="js-open-menu is-open"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-js-open-menu
+        >
+          <svg width="45" height="45">
+            <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+            <use class="icon-close" href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="js-menu-container" id="js-menu-container" data-menu>
+          <button type="button" class="js-close-menu">
+            <svg width="45" height="45">
+              <use class="icon-close" href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
